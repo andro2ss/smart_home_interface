@@ -1,0 +1,37 @@
+{
+  "devices": [
+    {
+      "type": "bulb",
+      "id": "1",
+      "name": "bulb1",
+      "connectionState": "connected",
+      "isTurnedOn": true,
+      "brightness": 55,
+      "color": "#F0F8FF"
+    },
+    {
+      "type": "bulb",
+      "id": "2",
+      "name": "bulb2",
+      "connectionState": "disconnected",
+      "isTurnedOn": false,
+      "brightness": 55,
+      "color": "#F0F8FF"
+    },
+    {
+      "type": "outlet",
+      "id": "3",
+      "name": "outlet1",
+      "connectionState": "poorConnection",
+      "isTurnedOn": true,
+      "powerConsumption": 230
+    },
+    {
+      "type": "temperatureSensor",
+      "id": "4",
+      "name": "temperatureSensor1",
+      "connectionState": "connected",
+      "temperature": 24
+    }
+  ]
+}
