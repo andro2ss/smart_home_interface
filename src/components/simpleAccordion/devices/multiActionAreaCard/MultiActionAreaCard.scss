@@ -1,0 +1,16 @@
+.item {
+  word-wrap: break-word;
+  margin: 5px;
+
+  &--disconnected {
+    border: 2px solid #ef5350;
+  }
+
+  &--connected {
+    border: none;
+  }
+
+  &--poorConnection {
+    border: 2px solid #ff9800;
+  }
+}
