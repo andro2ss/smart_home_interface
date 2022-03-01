@@ -1,0 +1,60 @@
+.text {
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &--title {
+    font-weight: 700;
+  }
+
+  &--normal {
+    margin: 5px 0 5px 16px;
+    position: relative;
+
+    .circle {
+      height: 16px;
+      width: 16px;
+      background: transparent;
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid black;
+      margin-left: 8px;
+
+      &--orange {
+        background: #ff9800;
+      }
+
+      &--red {
+        animation: mymove 500ms infinite;
+
+      }
+
+      &--green {
+        background: chartreuse;
+
+      }
+
+    }
+  }
+}
+
+@keyframes mymove {
+
+  0% {
+    background-color: #ef5350;
+  }
+  30% {
+    background-color: #ef5350;
+  }
+  50% {
+    background-color: transparent;
+  }
+  70%{
+    background-color: #ef5350;
+  }
+  100% {
+    background-color: #ef5350;
+  }
+}
