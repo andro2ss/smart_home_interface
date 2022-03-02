@@ -4,10 +4,11 @@
       "type": "bulb",
       "id": "1",
       "name": "bulb1",
-      "connectionState": "connected",
+      "connectionState": "poorConnection",
       "isTurnedOn": true,
       "brightness": 55,
-      "color": "#F0F8FF"
+      "color": "#F0F8FF",
+      "changes": "poorConnection"
     },
     {
       "type": "bulb",
@@ -22,16 +23,18 @@
       "type": "outlet",
       "id": "3",
       "name": "outlet1",
-      "connectionState": "poorConnection",
+      "connectionState": "disconnected",
       "isTurnedOn": true,
-      "powerConsumption": 230
+      "powerConsumption": 230,
+      "changes": "disconnected"
     },
     {
       "type": "temperatureSensor",
       "id": "4",
       "name": "temperatureSensor1",
       "connectionState": "connected",
-      "temperature": 24
+      "temperature": 24,
+      "changes": "connected"
     }
   ]
 }
