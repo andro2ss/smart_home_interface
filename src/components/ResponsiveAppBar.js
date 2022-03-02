@@ -67,10 +67,7 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Button
-                    textAlign="center"
-                    href={("#" + page).replace(/\s/g, "")}
-                  >
+                  <Button href={("#" + page).replace(/\s/g, "")}>
                     {page}S
                   </Button>
                 </MenuItem>
