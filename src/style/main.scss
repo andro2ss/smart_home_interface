@@ -3,3 +3,20 @@
 * {
   box-sizing: border-box;
 }
+
+.App{
+  position: relative;
+
+  #emptyListMessage{
+    display: block;
+    margin-top: 70px;
+  }
+
+  .btn__box{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    row-gap: 16px;
+    max-width: 1200px;
+  }
+}
