@@ -10,16 +10,22 @@ light bulb, electric socket and temperature sensor.
 
 ## Used technology:
 <li>React</li>
+<li>Redux</li>
 <li>Scss</li>
 <li>MUI</li>
 
 ## Setup
-To run this project, install it locally using npm:
+To run this project, clone repo and install it locally using npm:
 
 ```
-$ cd ../lorem
 $ npm install
+```
+
+Then turn On JSON Server on first terminal:
+```
 $ json-server db.json --routes routes.json
+```
+Next on second terminal start npm:
+```
 $ npm start
- 
 ```
