@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import deviceFromArray from "./functions/deviceFromArray";
 import { setDeviceDetails } from "./actions";
 import OutlinedButtons from "./components/common/buttons/OutlinedButtons";
+import addDevice from "./functions/addDevice";
 
 function App() {
   const [devices, setDevices] = useState([]);
@@ -53,19 +54,19 @@ function App() {
         <OutlinedButtons
           text={"add Bulb"}
           onClick={() => {
-            console.log("add Bulb");
+            addDevice("bulb", setServerRequestStatus);
           }}
         />
         <OutlinedButtons
           text={"add Outlet"}
           onClick={() => {
-            console.log("add Outlet");
+            addDevice("outlet", setServerRequestStatus);
           }}
         />
         <OutlinedButtons
           text={"add Temperature Sensor"}
           onClick={() => {
-            console.log("add temp sensor");
+            addDevice("temperatureSensor", setServerRequestStatus);
           }}
         />
       </div>
