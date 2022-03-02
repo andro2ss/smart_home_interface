@@ -7,7 +7,7 @@
     flex-direction: column;
     max-width: 340px;
     width: 100%;
-    border-radius: 20px;
+    border-radius: 5px;
     border: 1px solid black;
     padding: 20px 10px;
     background: whitesmoke;
@@ -15,6 +15,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow-y: auto;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 6px; /* width of the entire scrollbar */
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; /* color of the tracking area */
+      height: 90%;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #2196f3; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+    }
+
 
     .container {
       &__text {
