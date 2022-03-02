@@ -1,6 +1,8 @@
 .item {
   word-wrap: break-word;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
 
   &--disconnected {
     border: 2px solid #ef5350;
