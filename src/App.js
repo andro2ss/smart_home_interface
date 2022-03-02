@@ -3,15 +3,39 @@ import loadDevices from "./functions/loadDevices";
 import SimpleAccordion from "./components/simpleAccordion/SimpleAccordion";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import FixedBottomNavigation from "./components/FixedBottomNavigation";
+import ModalDetails from "./components/modal/ModalDetails";
+import serverChangesSymulation from "./functions/serverChangesSymulation";
+import { useDispatch, useSelector } from "react-redux";
+import deviceFromArray from "./functions/deviceFromArray";
+import { setDeviceDetails } from "./actions";
+import OutlinedButtons from "./components/common/buttons/OutlinedButtons";
 
 function App() {
   const [devices, setDevices] = useState([]);
   const [serverRequestStatus, setServerRequestStatus] = useState("init");
+  const [intervalInit, setIntervalInit] = useState("init");
+
+  const dispatch = useDispatch();
+  const deviceId = useSelector((state) => state.deviceDetailsId);
+
+  if (intervalInit === "init") {
+    setIntervalInit("initialized");
+    setInterval(function () {
+      setServerRequestStatus("updateData");
+    }, 5000);
+  }
 
   useEffect(() => {
-    console.log(serverRequestStatus);
-    loadDevices(setDevices, setServerRequestStatus);
-    console.log(devices);
+    if (serverRequestStatus !== "loaded") {
+      if (serverRequestStatus !== "loading") {
+        setServerRequestStatus("loading");
+        loadDevices(setDevices, setServerRequestStatus);
+        serverChangesSymulation(devices);
+      }
+    }
+    if (deviceId !== 0) {
+      dispatch(setDeviceDetails(deviceFromArray(devices, deviceId)[0]));
+    }
   }, [serverRequestStatus]);
 
   return (
@@ -23,8 +47,29 @@ function App() {
           setServerRequestStatus={setServerRequestStatus}
         />
       ) : (
-        "You dont have devices"
+        <span id="emptyListMessage">You dont have any devices</span>
       )}
+      <div className="btn__box">
+        <OutlinedButtons
+          text={"add Bulb"}
+          onClick={() => {
+            console.log("add Bulb");
+          }}
+        />
+        <OutlinedButtons
+          text={"add Outlet"}
+          onClick={() => {
+            console.log("add Outlet");
+          }}
+        />
+        <OutlinedButtons
+          text={"add Temperature Sensor"}
+          onClick={() => {
+            console.log("add temp sensor");
+          }}
+        />
+      </div>
+      <ModalDetails />
       <FixedBottomNavigation />
     </div>
   );
