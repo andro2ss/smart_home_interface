@@ -7,11 +7,19 @@ import { CardActionArea } from "@mui/material";
 import "./MultiActionAreaCard.scss";
 import CardsActions from "./items/CardsActions";
 import CardsBody from "./items/CardsBody";
+import { useDispatch } from "react-redux";
+import {
+  setDeviceDetails,
+  setDeviceDetailsId,
+  setModalClassName,
+} from "../../../../actions";
 
 export default function MultiActionAreaCard({
   device,
   setServerRequestStatus,
 }) {
+  const dispatch = useDispatch();
+
   const bulbImg = require("../../../../img/bulb.jpg");
   const outletImg = require("../../../../img/outlet.jpg");
   const thermostatImg = require("../../../../img/thermostat.jpg");
@@ -32,8 +40,19 @@ export default function MultiActionAreaCard({
           height="70"
           image={setImage}
           alt={device.type}
+          onClick={(e) => {
+            dispatch(setDeviceDetails(device));
+            dispatch(setDeviceDetailsId(device.id));
+            dispatch(setModalClassName("modal__window opened"));
+          }}
         />
-        <CardContent>
+        <CardContent
+          onClick={(e) => {
+            dispatch(setDeviceDetails(device));
+            dispatch(setDeviceDetailsId(device.id));
+            dispatch(setModalClassName("modal__window opened"));
+          }}
+        >
           <Typography gutterBottom variant="h5" component="div">
             {device.name}
           </Typography>
