@@ -1,0 +1,59 @@
+.modal {
+  &__window {
+    touch-action: none;
+    user-select: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 20px 10px;
+    background: whitesmoke;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .container {
+      &__text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 8px 12px;
+
+        &--title {
+          font-weight: 700;
+        }
+
+        &--normal {
+          margin: 5px 0 5px 16px;
+
+          .square {
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 2px;
+            margin-left: 8px;
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+
+      }
+
+    }
+
+  }
+}
+
+.closed {
+  display: none;
+}
+
+.open {
+  display: flex;
+}
+

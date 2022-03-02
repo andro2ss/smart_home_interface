@@ -2,7 +2,6 @@
   &__container {
     display: flex;
     flex-direction: column;
-
   }
 
   &--title {
@@ -27,7 +26,7 @@
       }
 
       &--red {
-        animation: mymove 500ms infinite;
+        animation: blinkRed 500ms infinite;
 
       }
 
@@ -40,7 +39,7 @@
   }
 }
 
-@keyframes mymove {
+@keyframes blinkRed {
 
   0% {
     background-color: #ef5350;
