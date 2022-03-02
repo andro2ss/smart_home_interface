@@ -1,40 +1,47 @@
 {
   "devices": [
     {
-      "type": "bulb",
-      "id": "1",
-      "name": "bulb1",
-      "connectionState": "poorConnection",
-      "isTurnedOn": true,
-      "brightness": 55,
-      "color": "#F0F8FF",
-      "changes": "poorConnection"
-    },
-    {
-      "type": "bulb",
-      "id": "2",
-      "name": "bulb2",
-      "connectionState": "disconnected",
-      "isTurnedOn": false,
-      "brightness": 55,
-      "color": "#F0F8FF"
-    },
-    {
+      "name": "salon",
+      "id": "8ed84483-023e-79c3-204b-f55fe8d7caa1",
       "type": "outlet",
-      "id": "3",
-      "name": "outlet1",
-      "connectionState": "disconnected",
-      "isTurnedOn": true,
-      "powerConsumption": 230,
-      "changes": "disconnected"
+      "connectionState": "connected",
+      "isTurnedOn": false,
+      "powerConsumption": 135
     },
     {
-      "type": "temperatureSensor",
-      "id": "4",
-      "name": "temperatureSensor1",
+      "name": "bulb1",
+      "id": "1b26e4db-7a79-ad03-f079-635f0954b407",
+      "type": "bulb",
+      "connectionState": "poorConnection",
+      "isTurnedOn": false,
+      "brightness": 82,
+      "color": "#3d3b7c"
+    },
+    {
+      "name": "bulb2",
+      "id": "08f42de6-eac9-854f-d57a-29440bb978e6",
+      "type": "bulb",
+      "connectionState": "poorConnection",
+      "isTurnedOn": false,
+      "brightness": 51,
+      "color": "#c1c8f1"
+    },
+    {
+      "name": "bulb3",
+      "id": "997f5607-0031-ff3b-86d0-9bd9a88e2daa",
+      "type": "bulb",
       "connectionState": "connected",
-      "temperature": 24,
-      "changes": "connected"
+      "isTurnedOn": false,
+      "brightness": 78,
+      "color": "#69859"
+    },
+    {
+      "name": "tak",
+      "id": "d6078ca6-aba2-b650-bb4a-abd182cc97cc",
+      "type": "temperatureSensor",
+      "connectionState": "connected",
+      "isTurnedOn": false,
+      "temperature": 22
     }
   ]
 }
